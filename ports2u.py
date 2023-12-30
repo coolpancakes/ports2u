@@ -1,3 +1,5 @@
+#  Port scanner I built in python, Version 1.0.0
+
 import argparse
 import socket
 import sys
@@ -29,12 +31,22 @@ def port_scan(ip_address: str, ports: str):
 def main_menu():
     parser = argparse.ArgumentParser(prog='ports2u',
                                      description='Scans IP for open ports based on the users input',
-                                     usage='ports2u.py -ip IP_HERE -p PORT_HERE')
-    ip = parser.add_argument('-ip', metavar='--IP', help='Add your IP address here as follows: -ip 192.168.1.0', )
-    port = parser.add_argument('-p', metavar='--P', help='Add your ports or port as follows: -p 80.43.53.21'
-                                                         '-p 80')
+                                     usage='ports2u.py -ip IP_HERE -p PORT_HERE or ports2u.py -h for help')
+    ip = parser.add_argument('-ip', metavar='--IP',
+                             help='Add your IP address here as follows: -ip 192.168.1.0',
+                             required=True)
+
+    port = parser.add_argument('-p', metavar='--P',
+                               help='Add your ports or port as follows: -p 80.43.53.21'
+                               '-p 80', required=True)
+
+    version = parser.add_argument('--version', help='Check the ports2u version',
+                                  action='version', version='1.0.0')
+
     args = parser.parse_args()
+
     port_scan(args.ip, args.p)
 
 
 main_menu()
+
