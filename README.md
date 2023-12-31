@@ -1,4 +1,4 @@
-# ports2u SYNTAX
+# ports2u 
 
 python ports2u.py -ip 192.168.1.0 -p 80
 
