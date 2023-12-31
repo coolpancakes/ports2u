@@ -1,4 +1,4 @@
-# ports2u is a portscanner I made in python, check the following for syntax (:
+# ports2u SYNTAX
 
 python ports2u.py -ip 192.168.1.0 -p 80
 
