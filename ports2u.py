@@ -37,7 +37,7 @@ def main_menu():
                              required=True)
 
     port = parser.add_argument('-p', metavar='--P',
-                               help='Add your ports or port as follows: -p 80.43.53.21'
+                               help='Add your ports or port as follows: -p 80,43,53,21'
                                '-p 80', required=True)
 
     version = parser.add_argument('--version', help='Check the ports2u version',
